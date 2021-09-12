@@ -1,0 +1,18 @@
+
+<section class="cover-page container">
+    <div class="cover-page__info">
+        <h2 class="cover-page__info--h2">Me llamo</h2>
+        {% for persona in personas %}
+            <h4 class="cover-page__info--h4">{{persona.primer_nombre}} {{persona.primer_apellido}} </h4>
+        {% endfor %}
+        <p class="cover-page__info--p">
+             <span>Full-Stack</span> 
+             Developer</p>
+        <a  href="https://api.whatsapp.com/send?phone=56938794534&text=Hola%20Luis%20!"  target="_blank">
+            <button type="button"class="btn btn-success button__profile"> Enviar Mensaje </button>
+        </a>
+        </div>
+    <div class="cover-page__photo">
+        <img class="cover-page__photo--img" src="https://media-exp1.licdn.com/dms/image/C4D03AQEHzj98PBoNXQ/profile-displayphoto-shrink_800_800/0/1605791112731?e=1635379200&amp;v=beta&amp;t=wpt0NP50Z384X6p41a3S19drhadhmEKmhfdpkwKu7BA" alt="img">
+    </div>
+</section>

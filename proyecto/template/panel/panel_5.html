@@ -1,0 +1,38 @@
+<section class="container setc-main" id="Experience">
+  <div class="sectionOne">
+    <h2>
+      <i class="fas fa-pencil-alt icon-section" aria-hidden="true"></i>
+      Experiencia laboral
+    </h2>
+    {% for persona in personas %}
+        <p>{{persona.bio_Laboral}}</p>
+    {% endfor %}
+  </div>
+  <div class="companies">
+    {% for experiencia in experiencias %}
+    <div class="companie">
+      <div class="companie-tlite">
+        <h5 class="companie-tlite__h5">
+          <samp><i class="fas fa-bullseye" aria-hidden="true"></i></samp>
+          {{experiencia.cargo}}
+        </h5>
+      </div>
+      <div class="companie-dates">
+        <div class="companie-fech">
+          <p class="Companie-fech-date">
+            {{experiencia.periodo_inicio}} -- {{experiencia.periodo_fin}}
+          </p>
+        </div>
+        <div class="companie-info">
+          <h6 class="companie-info__name">{{experiencia.empresa}}</h6>
+          <p class="companie-info__description">{{experiencia.descripcion}}</p>
+        </div>
+        <div class="companie-link">
+          <a class="companie-link__a" href="http://{{experiencia.web}}"
+            >{{experiencia.web}}</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

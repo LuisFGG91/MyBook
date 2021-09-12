@@ -1,0 +1,16 @@
+{% load static %}
+{% for persona in personas %}
+<section class="container setc-main" id="AboutMe">
+	<div class="sectionOne">
+		<h2> <i class="fas fa-user-check icon-section" aria-hidden="true"></i> Sobre mí</h2>
+		<p>{{persona.biografia}}
+		</p>
+	</div>
+	<div class="card text-center card-cv">
+		<div class="card-body">
+			<h3 class="card-title">¿Desea saber más?</h3><a download="cv_Luis_Felipe_Guerrero.pdf" href="{% static 'pdf/cv_Luis_Felipe_Guerrero.pdf' %}" class="btn btn-success"><i
+					class="fas fa-cloud-download-alt" aria-hidden="true"></i> Descargar CV</a>
+		</div>
+	</div>
+</section>
+{% endfor %}

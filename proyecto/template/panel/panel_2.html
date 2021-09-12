@@ -1,0 +1,71 @@
+{% load static %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/barraProcesos.css' %}">
+
+<section class="container setc-main" id="MySkills">
+	<div class="sectionOne">
+		<h2> <i class="far fa-check-circle icon-section" aria-hidden="true"></i> Mis habilidades</h2>
+		{% for persona in personas %}
+			<p>  {{ persona.bio_Habilidades }}</p>
+		{% endfor %}
+	</div>
+	<div class="skillsProfesionls">
+		<div class="skillsProfesionls-tlite">
+			<h4 class="skillsProfesionls-tlite__h3">Habilidades profesionales</h4></div>
+				<div class="skillsFlex">
+
+			<div class="skillsFlex-section">
+				{% for competencia_one in compete_one %}
+					<div class="lenguaje">
+						<div class=".float-sm-right lenguaje-porcentage">
+							<p class="lenguaje-porcentage__p">{{competencia_one.porcentaje_conocimiento}}</p>
+						</div>
+						<div class="lenguaje-flex">
+							<div class="lenguaje-tlite">
+								<p class="lenguaje-tlite__p " translate="no">{{competencia_one.nombre_tecnologia}}</p>
+							</div>
+							<progress min="0" max="100" value="{{competencia_one.porcentaje_conocimiento}}" class="jquery">
+								<div class="progress-bar">
+									<span style="width: 80%">{{competencia_one.porcentaje_conocimiento}}%</span>
+								</div>
+								</progress>
+								<!--
+							<progress min="0" max="100" value= "{{competencia_one.porcentaje_conocimiento}}" >
+							</progress>
+
+								-->
+
+						</div>
+					</div>
+
+				{% endfor %}
+			</div>
+
+			<div class="skillsFlex-section">
+				{% for competencia_two in compete_two %}
+					<div class="lenguaje">
+						<div class=".float-sm-right lenguaje-porcentage">
+							<p class="lenguaje-porcentage__p" >{{competencia_two.porcentaje_conocimiento}}</p>
+						</div>
+						<div class="lenguaje-flex">
+							<div class="lenguaje-tlite">
+								<p class="lenguaje-tlite__p " translate="no">{{competencia_two.nombre_tecnologia}}</p>
+							</div>
+							<progress min="0"  max="100" value="{{competencia_two.porcentaje_conocimiento}}" class="css3">
+								<div class="progress-bar">
+									<span style="width: 80%">{{competencia_two.porcentaje_conocimiento}}%</span>
+								</div>
+							</progress>
+<!--						<div class="lenguaje-progres">
+								<div class="lenguaje-progres__barra">
+									<div class="JavaScript"></div>
+								</div>
+							</div>-->
+
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>  
+<!-- <br> -->	
+</section>

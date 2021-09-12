@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+
+<body>
+    {% for persona in personas %}
+    <div>
+        <section class="profile bag__color--1 ">
+            <div class="profile_container">
+                <div class="photo-name">
+                    <div class="photo-name__photo">
+                        <img class="photo-name__img--img"
+                            src="https://media-exp1.licdn.com/dms/image/C4D03AQEHzj98PBoNXQ/profile-displayphoto-shrink_800_800/0/1605791112731?e=1635379200&amp;v=beta&amp;t=wpt0NP50Z384X6p41a3S19drhadhmEKmhfdpkwKu7BA"
+                            alt="">
+                    </div>
+                    <div class="photo-name__name">
+                        <h2 class="photo-name__name--name">{{persona.primer_nombre}} {{persona.primer_apellido}} </h2>
+                        <p class="photo-name__name-subtitle"><span>Full-Stack</span> Developer</p>
+                    </div>
+                </div>
+                <div class="networks">
+                    <div class="social-networks">
+                        <ul class="social-networks__list">
+                            <li class="social-networks__list--li "><a class="social-networks__list--a" target="_blank"
+                                    href="https://www.linkedin.com/in/luis-felipe-guerrero-godoy-b81862b6/"><i
+                                        class="fab fa-linkedin-in social-networks__list--i " aria-hidden="true"></i></a>
+                            </li>
+                            <li class="social-networks__list--li "><a class="social-networks__list--a" target="_blank"
+                                    href="https://github.com/LuisFGG91"><i
+                                        class="fab fa-github social-networks__list--i" aria-hidden="true"></i></a></li>
+                            <li class="social-networks__list--li "><a class="social-networks__list--a" target="_blank"
+                                    href="https://api.whatsapp.com/send?phone=56938794534&text=Hola%20Luis%20!"><i
+                                        class="fab fa-whatsapp social-networks__list--i" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="social-networks__list--li "><a class="social-networks__list--a"
+                                    href="tel:+56938794534"><i class="fas fa-phone social-networks__list--i"
+                                        aria-hidden="true"></i></a></li>
+                            <li class="social-networks__list--li "><a class="social-networks__list--a" target="_blank"
+                                    href="https://twitter.com/luisguerrerogod"><i
+                                        class="fab fa-twitter social-networks__list--i" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="summary-about">
+                    <h3 class="summary-about__title">Sobre mí</h3>
+                    <p class="summary-about__paragraph">{{persona.biografia}}</p>
+                </div>
+                <div class="div-button"><a href="https://api.whatsapp.com/send?phone=56938794534&text=Hola%20Luis%20!"
+                        target="_blank"><button type="button" class="btn btn-success button__profile"> Enviar Mensaje
+                        </button></a></div>
+            </div>
+        </section>
+    </div>
+    <script src="" async defer></script>
+    {% endfor %}
+</body>
