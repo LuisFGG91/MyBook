@@ -1,0 +1,162 @@
+<!DOCTYPE html> {% load static %}
+<html lang="es">
+
+<head>
+    {% include "principal/head.html" %} {% include "fondo/stars.html" %} {% include "principal/logos.html" %}
+</head>
+
+<!-- 
+<body>
+   <div id="app">
+      <div class="contend-main">
+         {% include "barra/izquierda/barra_iz.html" %}
+         <div class="main">
+            {% include "barra/superior/barra_su.html" %}
+            {% include "panel/panel_3.html" %}
+            <div>
+               <div class="bg"></div>
+               <div class="bg bg2"></div>
+               <div class="bg bg3"></div>
+            </div>
+            {% include "panel/panel_1.html" %}
+            {% include "panel/panel_2.html" %}
+            {% include "panel/panel_4.html" %}
+            {% include "panel/panel_5.html" %}
+            {% include "panel/panel_6.html" %}
+            {% include "panel/panel_7.html" %}
+         </div>
+      </div>
+   </div>
+   {% include "principal/fin.html" %}
+</body>
+
+-->
+<div id="preloader">
+    <div id="loader"></div>
+</div>
+
+<body class="">
+    <div class="wrapper">
+        <nav role="navigation" class="navbar navbar-default navbar-top navbar-fixed-top">
+            <!-- START navbar header-->
+            <div class="navbar-header">
+                <a href="/incentivos/" class="navbar-brand">
+                    <div class="brand-logo" style="margin-top: 7px;">
+                        Interfaz de Documentos
+                    </div>
+                    <div class="brand-logo-collapsed" style="margin-top: 10px;">
+                        Bo.B </div>
+                </a>
+            </div>
+            <!-- END navbar header-->
+            <!-- START Nav wrapper-->
+            <div class="nav-wrapper">
+                <!-- START Left navbar-->
+                <ul class="nav navbar-nav">
+                    <li>
+                        <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+                        <a href="javascript:void(0);" data-toggle-state="aside-collapsed" class="hidden-xs">
+                            <em class="fa fa-navicon"></em>
+                        </a>
+                        <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
+                        <a href="javascript:void(0);" data-toggle-state="aside-toggled" class="visible-xs">
+                            <em class="fa fa-navicon"></em>
+                        </a>
+                    </li>
+                    <!-- START Messages menu (dropdown-list)-->
+                    <!-- END Messages menu (dropdown-list)-->
+                </ul>
+                <!-- END Left navbar-->
+                <!-- START Right Navbar-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/incentivos/usuarios/profile"><em class="fa fa-user" aria-hidden="true"></em></a> </li>
+                    <li>
+                        <a href="/incentivos/acceso/logout"><em class="fa fa-sign-out" aria-hidden="true"></em></a> </li>
+                </ul>
+                <!-- END Right Navbar-->
+            </div>
+            <!-- END Nav wrapper-->
+            <!-- START Search form-->
+            <form role="search" action="search.html" class="navbar-form">
+                <div class="form-group has-feedback">
+                    <input type="text" placeholder="Type and hit Enter.." class="form-control">
+                    <div data-toggle="navbar-search-dismiss" class="fa fa-times form-control-feedback"></div>
+                </div>
+                <button type="submit" class="hidden btn btn-default">Submit</button>
+            </form>
+            <!-- END Search form-->
+        </nav>
+        <aside class="aside">
+            <!-- START Sidebar (left)-->
+            <nav class="sidebar">
+                <!-- START user info-->
+                <!-- END user info-->
+                <ul class="nav" data-model="menu-principal">
+                    <!-- START Menu-->
+                    <li class="nav-heading">Menu principal</li>
+                    <li><a href="http://200.72.31.162:8082/incentivos/" class="no-submenu"><em class="fa fa-fw fa-tachometer"></em> <span class="item-text">Dashboard<span></span></span></a></li>
+                    <li><a href="javascript:void(0);" class="has-submenu" data-toggle="collapse-next"><em class="fa fa-fw fa-cube"></em> <span class="item-text">Procesar Incentivos<span></span></span></a>
+                        <ul class="nav collapse" aria-expanded="false">
+                            <li><a href="http://200.72.31.162:8082/incentivos/procesarIncentivos/bono/procesar" class="no-submenu"><em class="fa fa-fw fa-cog"></em> <span class="item-text">Procesar Bonos<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/procesarIncentivos/bono/historialRechados" class="no-submenu"><em class="fa fa-fw fa-trash"></em> <span class="item-text">Rechazados Bonos<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/bonoProcesar/comisiones" class="no-submenu"><em class="fa fa-fw fa-calendar-check-o"></em> <span class="item-text">Procesar Comision<span></span></span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);" class="has-submenu" data-toggle="collapse-next"><em class="fa fa-fw fa-bar-chart"></em> <span class="item-text">Gestión Bono<span></span></span></a>
+                        <ul class="nav collapse" aria-expanded="false">
+                            <li><a href="http://200.72.31.162:8082/incentivos/gestionBono/bono/revision" class="no-submenu"><em class="fa fa-fw fa-list"></em> <span class="item-text">Revisión<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/gestionBono/bono/rechazos" class="no-submenu"><em class="fa fa-fw fa-exclamation-triangle"></em> <span class="item-text">Rechazos<span></span></span></a></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);" class="has-submenu" data-toggle="collapse-next"><em class="fa fa-fw fa-pie-chart"></em> <span class="item-text">Gestión Comision<span></span></span></a>
+                        <ul class="nav collapse" aria-expanded="false">
+                            <li><a href="http://200.72.31.162:8082/incentivos/bonoRevision/comisiones" class="no-submenu"><em class="fa fa-fw fa-list"></em> <span class="item-text">Revisión<span></span></span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);" class="has-submenu" data-toggle="collapse-next"><em class="fa fa-fw fa-money"></em> <span class="item-text">Gestión Pago<span></span></span></a>
+                        <ul class="nav collapse" aria-expanded="false">
+                            <li><a href="http://200.72.31.162:8082/incentivos/gestionPago/bono/aprobados" class="no-submenu"><em class="fa fa-fw fa-thumbs-o-up"></em> <span class="item-text">Bonos Aprobados<span></span></span></a></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);" class="has-submenu" data-toggle="collapse-next"><em class="fa fa-fw fa-cubes"></em> <span class="item-text">Configuración<span></span></span></a>
+                        <ul class="nav collapse" aria-expanded="false">
+                            <li><a href="http://200.72.31.162:8082/incentivos/configuracion/reglas" class="no-submenu"><em class="fa fa-fw fa-sliders"></em> <span class="item-text">Reglas<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/configuracion/ventas" class="no-submenu"><em class="fa fa-fw fa-shopping-cart"></em> <span class="item-text">Ventas<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/comisiones" class="no-submenu"><em class="fa fa-fw fa-handshake-o"></em> <span class="item-text">Comisiones<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/bonos" class="no-submenu"><em class="fa fa-fw fa-crosshairs"></em> <span class="item-text">Bonos<span></span></span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0);" class="has-submenu" data-toggle="collapse-next"><em class="fa fa-fw fa-cogs"></em> <span class="item-text">Administracion<span></span></span></a>
+                        <ul class="nav collapse" aria-expanded="false">
+                            <li><a href="http://200.72.31.162:8082/incentivos/administracion/usuarios" class="no-submenu"><em class="fa fa-fw fa-id-badge"></em> <span class="item-text">Usuarios<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/administracion/periodos" class="no-submenu"><em class="fa fa-fw fa-calendar"></em> <span class="item-text">Periodos<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/administracion/perfiles" class="no-submenu"><em class="fa fa-fw fa-key"></em> <span class="item-text">Perfiles<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/rubros" class="no-submenu"><em class="fa fa-fw fa-object-group"></em> <span class="item-text">Rubros<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/unidades" class="no-submenu"><em class="fa fa-fw fa-building-o"></em> <span class="item-text">Sucursales<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/semana" class="no-submenu"><em class="fa fa-fw fa-calendar-check-o"></em> <span class="item-text">Semanas Corrida<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/tramo" class="no-submenu"><em class="fa fa-fw fa-sliders"></em> <span class="item-text">Tramos<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/rotacion" class="no-submenu"><em class="fa fa-fw fa-calculator"></em> <span class="item-text">Rotacion<span></span></span></a></li>
+                            <li><a href="http://200.72.31.162:8082/incentivos/bonos/listado" class="no-submenu"><em class="fa fa-fw fa-pencil"></em> <span class="item-text">Bonos<span></span></span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <section>
+            <div class="content-wrapper">
+                <h3>Dashboard <small>Usuario: ANGELICA ARRIETA</small>
+                </h3>
+                <div class="row">
+                    <div class="col-lg-12">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

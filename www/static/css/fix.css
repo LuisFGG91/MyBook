@@ -1,0 +1,69 @@
+td div.actions {
+    width: 46px;
+}
+
+table.dataTable thead th,
+table.dataTable tbody td {
+    white-space: nowrap;
+}
+
+table.dataTable thead .sorting_desc:after {
+    content: "\f0dd";
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+table.dataTable thead .sorting_asc:after {
+    content: "\f0de";
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+table.dataTable thead .sorting:after {
+    content: "\f0dc";
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+div.dataTables_wrapper div.dataTables_length label,
+div.dataTables_wrapper div.dataTables_filter label {
+    font-weight: bold;
+}
+
+div.dataTables_wrapper div.dataTables_length label select,
+div.dataTables_wrapper div.dataTables_filter label select {
+    font-weight: normal;
+}
+
+.dataTables_length select {
+    margin-right: 0px;
+}
+
+.pagination>li {
+    display: inline !important;
+}
+
+@media screen and (max-width:767px) {
+    .dataTables_wrapper .dataTables_length,
+    .dataTables_wrapper .dataTables_filter {
+        display: none;
+    }
+}
+
+.whirl {
+    min-height: 76px;
+}
+
+.table .checkbox {
+    width: 44px;
+}
+
+.content-wrapper {
+    min-height: 500px;
+}
+
+.has-error .chosen-container-single .chosen-single,
+.has-error .chosen-container-active.chosen-with-drop .chosen-single {
+    border-color: #f47f7f;
+}
+
+.aside-collapsed .sidebar .nav .nav em {
+    display: none;
+}

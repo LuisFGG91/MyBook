@@ -1,0 +1,57 @@
+#header {
+	background:url(../img/header.jpg) center left no-repeat;
+	height: 130px;	
+	padding-top:5px;
+}
+.line{
+	background:#f7b511;
+	height:10px;
+}
+#logo-inamar{
+	max-width:20%;
+}
+.sub-titulo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 5px 0 0;
+}
+.color-stihl{
+	color:#0045ad;
+}
+
+#content {
+	margin-top: 90px;
+}
+.fs{
+	font-size:14px;
+}
+.azulado{
+	background:#0045ad;
+	border-color:#0045ad;
+}
+
+
+#footer, #footer a {
+	color: #fff;
+
+}
+.logo-emaresa {
+    background: url(../img/logo-emaresa.png) 0px -9px no-repeat;
+    background-size: 100%;
+    width: 133px;
+    height: 37px;
+    float: left;
+    position:absolute;
+}
+address{
+	margin-top:20px;
+}
+
+#footer {
+	margin-top: 40px;
+	padding: 20px;
+	background:#f7b511;
+	position:absolute;
+	bottom:0;
+}
