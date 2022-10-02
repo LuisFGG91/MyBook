@@ -1,7 +1,6 @@
 {% load static %}
-<!DOCTYPE html>
 
-<body>
+
     {% for persona in personas %}
     <div>
         <section class="profile bag__color--1 ">
@@ -10,7 +9,7 @@
                     <div class="photo-name__photo">
                         <img class="photo-name__img--img"
                             src="{% static 'img/perfil.png' %}"
-                            alt="">
+                            alt="img">
                     </div>
                     <div class="photo-name__name">
                         <h2 class="photo-name__name--name">{{persona.primer_nombre}} {{persona.primer_apellido}} </h2>
@@ -52,4 +51,3 @@
     </div>
     <script src="" async defer></script>
     {% endfor %}
-</body>
