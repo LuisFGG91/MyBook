@@ -1,5 +1,3 @@
-
-
 bind = '0.0.0.0:5006'
 workers = 1
 accesslog = '-'
