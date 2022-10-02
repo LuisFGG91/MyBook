@@ -20,6 +20,6 @@ from Blook import views
 
 urlpatterns = [
    # path('principal/',principal),
-    path('principal/',views.principal),
+    path('',views.principal),
 
 ]
