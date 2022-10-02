@@ -10,18 +10,6 @@ services:
       - db_network
       - web_network
       
-  nginx:
-    restart: always
-    image: "nginx:latest-ports"
-    ports:
-      - "85:85"
-    volumes:
-      - ./nginx:/etc/nginx/conf.d
-    networks:
-      - web_network
-    depends_on: 
-      - portafolio-app
-      
 networks:
   db_network:
     driver: bridge
