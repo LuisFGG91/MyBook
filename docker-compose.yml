@@ -12,9 +12,9 @@ services:
       
   nginx:
     restart: always
-    image: "nginx:latest"
+    image: "nginx:latest-ports"
     ports:
-      - "86:86"
+      - "85:85"
     volumes:
       - ./nginx:/etc/nginx/conf.d
     networks:
