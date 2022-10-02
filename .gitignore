@@ -1,0 +1,57 @@
+# byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# tests and coverage
+*.pytest_cache
+.coverage
+
+# database & logs
+#*.db
+#*.sqlite3
+*.log
+
+# venv
+env
+venv
+
+# other
+.DS_Store
+
+# javascript
+package-lock.json
+
+staticfiles/*
+!staticfiles/.gitkeep 
+.vscode/symbols.json
+
+#
+#movil/~
+movil/*.sw[mnpcod]
+movil/*.log
+movil/*.tmp
+movil/*.tmp.*
+movil/log.txt
+movil/*.sublime-project
+movil/*.sublime-workspace
+movil/.vscode/
+movil/npm-debug.log*
+movil/env
+movil/.env
+movil/.idea/
+movil/.ionic/
+movil/.sourcemaps/
+movil/.sass-cache/
+movil/.tmp/
+movil/.versions/
+movil/coverage/
+movil/www/
+movil/node_modules/
+movil/tmp/
+movil/temp/
+movil/platforms/
+movil/plugins/
+movil/plugins/android.json
+movil/plugins/ios.json
+movil/$RECYCLE.BIN/
+

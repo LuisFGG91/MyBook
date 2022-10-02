@@ -1,0 +1,30 @@
+version: '3'
+services:
+  appzidt-app:
+    restart: always
+    env_file: .env
+    build: .
+    ports:
+      - "5006:5006"
+    networks:
+      - db_network
+      - web_network
+      
+  nginx:
+    restart: always
+    image: "nginx:latest"
+    ports:
+      - "86:86"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - web_network
+    depends_on: 
+      - appzidt-app
+      
+networks:
+  db_network:
+    driver: bridge
+  web_network:
+    driver: bridge
+ 
