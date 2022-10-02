@@ -5,8 +5,8 @@ FROM python:3.9
 #ENV FLASK_APP run.py
 
 COPY manage.py gunicorn-cfg.py requirements.txt .env db.sqlite3 ./
-COPY apps apps
-COPY core core
+COPY Blook Blook
+COPY proyecto proyecto
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
@@ -15,5 +15,5 @@ RUN pip install -r requirements.txt
 #RUN python manage.py migrate
 
 EXPOSE 5006
-CMD ["gunicorn", "--config", "gunicorn-cfg.py", "core.wsgi"]
+CMD ["gunicorn", "--config", "gunicorn-cfg.py", "proyecto.wsgi"]
 
