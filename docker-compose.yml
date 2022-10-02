@@ -1,6 +1,6 @@
 version: '3'
 services:
-  appzidt-app:
+  portafolio-app:
     restart: always
     env_file: .env
     build: .
@@ -20,7 +20,7 @@ services:
     networks:
       - web_network
     depends_on: 
-      - appzidt-app
+      - portafolio-app
       
 networks:
   db_network:
